@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-hospital</module>
+        <module>service-cmn</module>
     </modules>
 
     <properties>

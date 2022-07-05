@@ -4,6 +4,7 @@ import com.atguigu.yygh.model.hosp.HospitalSet;
 import com.atguigu.yygh.vo.hosp.HospitalQueryVo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fystart.yygh.common.execption.YyghException;
 import com.fystart.yygh.common.result.Result;
 import com.fystart.yygh.service.HospitalSetService;
 import com.fystart.yygh.serviceutil.MD5;
@@ -113,6 +114,13 @@ public class HospitalSetController {
     @ApiOperation("根据id获取医院设置")
     @GetMapping("/getHospSetById/{id}")
     public Result getHospSetById(@PathVariable("id") Long id){
+
+//        try{
+//            int i = 10/0;
+//        }catch (Exception e){
+//            throw new YyghException("失败",201);
+//        }
+
         HospitalSet hospitalSetServiceById = hospitalSetService.getById(id);
 
         return Result.ok(hospitalSetServiceById);

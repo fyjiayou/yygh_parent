@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @MapperScan("com.fystart.yygh.mapper")
 @Configuration
-public class HospConfig {
+public class CmnConfig {
 
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor(){

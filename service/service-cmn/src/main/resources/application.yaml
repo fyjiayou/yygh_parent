@@ -1,0 +1,36 @@
+# 端口号
+server:
+  port: 8202
+
+# 连接数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yygh_cmn?useSSL=false&serveTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+  # swagger2需要的配置
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # 服务名
+  application:
+    name: service-cmn
+
+  # redis相关配置
+  redis:
+    host: 192.168.202.129
+    port: 6379
+    database: 0
+    connect-timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: 1
+        max-idle: 5
+        min-idle: 0
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
